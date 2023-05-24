@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Resources:
+  RDSDatabase:
+    Type: AWS::RDS::DBInstance
+    Properties:
+      AllocatedStorage: 20
+      DBInstanceClass: db.t3.micro
+      DBInstanceIdentifier: RDSDatabase
+      PubliclyAccessible: true
+      StorageType: gp2
+      MasterUsername: xxx # change
+      MasterUserPassword: yyy # change
+      Engine: postgres
+      EngineVersion: 12.5 #8.0.28
